@@ -1,24 +1,13 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnsupportedSystem = true;
-  };
-
-  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = true;
 
   networking.hostName = "nixos";
 
   time.timeZone = "Asia/Manila";
-
-  services.xserver.enable = true;
-
-  programs.fish.enable = true;
 
   users.users.rcsaquino = {
     isNormalUser = true;
@@ -26,19 +15,13 @@
     shell = pkgs.fish;
   };
 
-  programs.zoxide.enable = true;
-  programs.zoxide.enableFishIntegration = true;
-
-  programs.git = {
-    enable = true;
-    config = {
-      user.name = "rcsaquino";
-      user.email = "rcsaquino.md@gmail.com";
+  services = {
+    gvfs.enable = true; # Network access in nautilus
+    xserver = {
+      enable = true;
+      videoDrivers = [ "nvidia" ];
     };
   };
-
-  programs.nix-ld.enable = true; # Make uv work
-  services.gvfs.enable = true; # Network access in nautilus
 
   nix = {
     optimise.automatic = true;

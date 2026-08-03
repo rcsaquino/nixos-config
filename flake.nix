@@ -14,16 +14,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    trcc-linux.url = "github:Lexonight1/thermalright-trcc-linux";
+
   };
 
   outputs = inputs: {
     nixosConfigurations.main-pc = inputs.nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./modules/hardware.nix
+        ./modules/apps.nix
         ./modules/configuration.nix
-        ./modules/noctalia.nix
-        ./modules/system_packages.nix
+        ./modules/hardware.nix
       ];
     };
   };
