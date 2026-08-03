@@ -55,11 +55,19 @@
     zed-editor
   ];
 
-  nix.channel.enable = false;
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    optimise.automatic = true;
+    channel.enable = false;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
 
   system.stateVersion = "26.05";
 }
