@@ -1,0 +1,95 @@
+{
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "session": {
+    "restore_unsaved_buffers": false,
+    "trust_all_worktrees": true
+  },
+  "default_open_behavior": "new_window",
+  "language_models": {
+    "opencode": {
+      "show_free_models": true,
+      "show_zen_models": false,
+    },
+  },
+  "cli_default_open_behavior": "new_window",
+  "git_panel": {
+    "dock": "left",
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "show_edit_predictions": true,
+  "auto_update": false,
+  "edit_predictions": {
+    "mode": "eager",
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "inline_assistant_model": {
+      "provider": "opencode",
+      "model": "go/deepseek-v4-flash",
+    },
+    "default_profile": "ask",
+    "default_model": {
+      "effort": "max",
+      "enable_thinking": true,
+      "provider": "opencode",
+      "model": "go/deepseek-v4-flash",
+    },
+  },
+  "languages": {
+    "Rust": {
+      "show_edit_predictions": false,
+    },
+    "V": {
+      "show_edit_predictions": false,
+      "tab_size": 4,
+      "formatter": {
+        "external": {
+          "command": "v",
+          "arguments": ["fmt"],
+        },
+      },
+    },
+    "Zig": {
+      "show_edit_predictions": false,
+    },
+    "Odin": {
+      "show_edit_predictions": false,
+    },
+    "Nix": {
+      "show_edit_predictions": false,
+      "formatter": {
+        "external": {
+          "command": "nixfmt"
+        }
+      },
+      "format_on_save": "on"
+    }
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false,
+  },
+  "buffer_font_size": 16.0,
+  "autosave": { "after_delay": { "milliseconds": 500 } },
+  "terminal": { "toolbar": { "breadcrumbs": false } },
+  "restore_on_startup": "empty_tab",
+  "extend_comment_on_newline": false,
+  "auto_signature_help": true,
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  }
+}

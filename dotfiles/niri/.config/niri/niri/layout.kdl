@@ -1,0 +1,50 @@
+layout {
+    gaps 16
+    center-focused-column "never"
+    always-center-single-column
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.75; }
+
+    focus-ring {
+        on
+        width 2
+    }
+
+    border {
+        off
+    }
+
+    shadow {
+        on
+        softness 24
+        spread 6
+        offset x=0 y=4
+        draw-behind-window true
+    }
+    tab-indicator {
+        on
+        hide-when-single-tab
+        position "top"
+        place-within-column
+        gap 8
+        gaps-between-tabs 4
+        corner-radius 12
+        width 4
+    }
+    struts {
+        top -8
+        bottom -4
+    }
+}
+
+recent-windows {
+    highlight {
+        corner-radius 16
+    }
+}

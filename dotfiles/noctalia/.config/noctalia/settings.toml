@@ -1,0 +1,131 @@
+[audio]
+enable_sounds = true
+sound_volume = 100
+
+[bar.default]
+margin_ends = 0
+background_opacity = 0.0
+shadow = false
+capsule = true
+capsule_padding = 12
+capsule_opacity = 0.95
+start = [ "launcher", "workspaces", "media"]
+center = ["clock"]
+end = [ "tray", "cpu", "ram", "volume", "bluetooth", "network", "battery", "session" ]
+
+[battery]
+warning_threshold = 20
+
+[control_center]
+sidebar = "full"
+sidebar_section = "none"
+
+[dock]
+enabled = true
+active_monitor_only = true
+auto_hide = true
+reserve_space = false
+show_dots = true
+cross_axis_padding = 4
+icon_size = 32
+item_spacing = 4
+shadow = false
+
+[hooks]
+started = "/home/rcsaquino/nixos-config/scripts/toggle-speakers/.venv/bin/python /home/rcsaquino/nixos-config/scripts/toggle-speakers/main.py on"
+shutting_down = "/home/rcsaquino/nixos-config/scripts/toggle-speakers/.venv/bin/python /home/rcsaquino/nixos-config/scripts/toggle-speakers/main.py off"
+
+[location]
+auto_locate = true
+
+[osd]
+position = "bottom_center"
+
+[plugins]
+enabled = [ "noctalia/notes" ]
+
+[shell]
+polkit_agent = true
+
+[shell.launcher]
+categories = false
+
+[shell.panel]
+transparency_mode = "soft"
+wallpaper_placement = "floating"
+control_center_placement = "floating"
+session_placement = "floating"
+session_position = "center"
+open_near_click_control_center = true
+
+# [[shell.session.actions]]
+# action = "command"
+# label = "Light Sleep"
+# glyph = "zzz"
+# command = "sudo -n /usr/local/bin/suspend-mode s2idle"
+# countdown_seconds = 5
+# shortcut = "1"
+
+# [[shell.session.actions]]
+# action = "command"
+# label = "Deep Sleep"
+# glyph = "moon"
+# command = "sudo -n /usr/local/bin/suspend-mode deep"
+# countdown_seconds = 5
+# shortcut = "2"
+
+# [[shell.session.actions]]
+# action = "reboot"
+# variant = "destructive"
+# countdown_seconds = 5
+# shortcut = "3"
+
+# [[shell.session.actions]]
+# action = "shutdown"
+# variant = "destructive"
+# countdown_seconds = 5
+# shortcut = "4"
+
+[theme]
+mode = "dark"
+source = "custom"
+custom_palette = "cattpuccin-mocha-blue"
+
+[theme.templates]
+builtin_ids = [ "alacritty", "gtk3", "gtk4", "niri", "qt" ]
+community_ids = [ "discord", "pi-agent", "steam", "telegram", "zed" ]
+
+[wallpaper]
+directory = "~/nixos-config/assets/wallpapers"
+
+[widget.launcher]
+# custom_image = "/home/rcsaquino/nixos-config/assets/icons/arch.svg"
+# custom_image_colorize = true
+
+[widget.workspaces]
+show_labels = false
+pill_scale = 0.7
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+[widget.clock]
+format = "{:%a %b%e  %H:%M}"
+# format = "{:%a %d %b | %H:%M}"
+
+[widget.tray]
+detached_panel = true
+drawer = true
+
+[widget.cpu]
+show_value = false
+
+[widget.ram]
+show_value = false
+
+[widget.volume]
+show_label = false
+
+[widget.network]
+show_label = false

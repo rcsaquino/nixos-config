@@ -1,0 +1,166 @@
+binds {
+    // ==========================================
+    //  System & Session Control
+    // ==========================================
+    Super+Shift+E { quit; }
+    Super+Shift+P { power-off-monitors; }
+    Super+Escape { toggle-keyboard-shortcuts-inhibit; }
+    Super+Shift+Slash { show-hotkey-overlay; }
+    Super+Ctrl+Shift+F1 repeat=false hotkey-overlay-title="Toggle eDP-1" { spawn "sh" "-c" "niri msg outputs | grep -n1 eDP-1 | grep -q Disabled && niri msg output eDP-1 on || niri msg output eDP-1 off"; }
+
+    // ==========================================
+    //  Window Management
+    // ==========================================
+    // -- General Actions --
+    Super+Q repeat=false { close-window; }
+    Super+Shift+F { fullscreen-window; }
+    Super+Shift+T { toggle-window-floating; }
+    Super+Shift+V { switch-focus-between-floating-and-tiling; }
+    Super+C { center-column; }
+    Super+Ctrl+C { center-visible-columns; }
+    Super+D repeat=false { toggle-overview; }
+    Super+Tab repeat=false { toggle-overview; }
+
+    // -- Focus Navigation (Vim & Arrows) --
+    Super+H { focus-column-left; }
+    Super+L { focus-column-right; }
+    Super+J { focus-window-down; }
+    Super+K { focus-window-up; }
+    Super+Left { focus-column-left; }
+    Super+Right { focus-column-right; }
+    Super+Down { focus-window-down; }
+    Super+Up { focus-window-up; }
+    Super+Home { focus-column-first; }
+    Super+End { focus-column-last; }
+    Super+WheelScrollLeft { focus-column-left; }
+    Super+WheelScrollRight { focus-column-right; }
+    Super+Shift+WheelScrollDown { focus-column-right; }
+    Super+Shift+WheelScrollUp { focus-column-left; }
+
+    // -- Moving Windows (Vim & Arrows) --
+    Super+Shift+H { move-column-left; }
+    Super+Shift+L { move-column-right; }
+    Super+Shift+J { move-window-down; }
+    Super+Shift+K { move-window-up; }
+    Super+Shift+Left { move-column-left; }
+    Super+Shift+Right { move-column-right; }
+    Super+Shift+Down { move-window-down; }
+    Super+Shift+Up { move-window-up; }
+    Super+Ctrl+Home { move-column-to-first; }
+    Super+Ctrl+End { move-column-to-last; }
+    Super+Ctrl+Shift+WheelScrollUp { move-column-left; }
+    Super+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Super+Ctrl+WheelScrollLeft { move-column-left; }
+    Super+Ctrl+WheelScrollRight { move-column-right; }
+
+    // -- Sizing & Layout --
+    Super+F { maximize-column; }
+    Super+Minus { set-column-width "-10%"; }
+    Super+Equal { set-column-width "+10%"; }
+    Super+Shift+Minus { set-window-height "-10%"; }
+    Super+Shift+Equal { set-window-height "+10%"; }
+    Super+R { switch-preset-column-width; }
+    Super+Shift+R { switch-preset-window-height; }
+    Super+Ctrl+F { expand-column-to-available-width; }
+    Super+Ctrl+R { reset-window-height; }
+    Super+W { toggle-column-tabbed-display; }
+
+    // -- Column Grouping --
+    Super+BracketLeft { consume-or-expel-window-left; }
+    Super+BracketRight { consume-or-expel-window-right; }
+    Super+Period { expel-window-from-column; }
+
+    // ==========================================
+    //  Workspaces
+    // ==========================================
+    // -- Standard 1-9 Switching --
+    Super+1 { focus-workspace 1; }
+    Super+2 { focus-workspace 2; }
+    Super+3 { focus-workspace 3; }
+    Super+4 { focus-workspace 4; }
+    Super+5 { focus-workspace 5; }
+    Super+6 { focus-workspace 6; }
+    Super+7 { focus-workspace 7; }
+    Super+8 { focus-workspace 8; }
+    Super+9 { focus-workspace 9; }
+
+    // -- Move Window to Workspace --
+    Super+Shift+1 { move-column-to-workspace 1; }
+    Super+Shift+2 { move-column-to-workspace 2; }
+    Super+Shift+3 { move-column-to-workspace 3; }
+    Super+Shift+4 { move-column-to-workspace 4; }
+    Super+Shift+5 { move-column-to-workspace 5; }
+    Super+Shift+6 { move-column-to-workspace 6; }
+    Super+Shift+7 { move-column-to-workspace 7; }
+    Super+Shift+8 { move-column-to-workspace 8; }
+    Super+Shift+9 { move-column-to-workspace 9; }
+
+    // -- Vertical/Dynamic Workspace Navigation --
+    Super+U { focus-workspace-down; }
+    Super+I { focus-workspace-up; }
+    Super+Page_Down { focus-workspace-down; }
+    Super+Page_Up { focus-workspace-up; }
+    Super+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Super+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+
+    // -- Vertical/Dynamic Workspace Movement --
+    Super+Ctrl+U { move-column-to-workspace-down; }
+    Super+Ctrl+I { move-column-to-workspace-up; }
+    Super+Ctrl+Down { move-column-to-workspace-down; }
+    Super+Ctrl+Up { move-column-to-workspace-up; }
+    Super+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Super+Ctrl+WheelScrollUp cooldown-ms=150 { move-column-to-workspace-up; }
+    Super+Shift+U { move-workspace-down; }
+    Super+Shift+I { move-workspace-up; }
+    Super+Shift+Page_Down { move-workspace-down; }
+    Super+Shift+Page_Up { move-workspace-up; }
+
+    // ==========================================
+    //  Monitor Management
+    // ==========================================
+    // -- Focus Monitor --
+    Super+Ctrl+H { focus-monitor-left; }
+    Super+Ctrl+J { focus-monitor-down; }
+    Super+Ctrl+K { focus-monitor-up; }
+    Super+Ctrl+L { focus-monitor-right; }
+    Super+Ctrl+Left { focus-monitor-left; }
+    Super+Ctrl+Right { focus-monitor-right; }
+
+    // -- Move Window to Monitor --
+    Super+Shift+Ctrl+H { move-column-to-monitor-left; }
+    Super+Shift+Ctrl+J { move-column-to-monitor-down; }
+    Super+Shift+Ctrl+K { move-column-to-monitor-up; }
+    Super+Shift+Ctrl+L { move-column-to-monitor-right; }
+    Super+Shift+Ctrl+Left { move-column-to-monitor-left; }
+    Super+Shift+Ctrl+Right { move-column-to-monitor-right; }
+    Super+Shift+Ctrl+Up { move-column-to-monitor-up; }
+    Super+Shift+Ctrl+Down { move-column-to-monitor-down; }
+
+    // ==========================================
+    //  Screenshots
+    // ==========================================
+    Print { screenshot; }
+    XF86Launch1 { screenshot; }
+    Alt+Print { screenshot-window; }
+    Alt+XF86Launch1 { screenshot-window; }
+    Ctrl+Print { screenshot-screen; }
+    Ctrl+XF86Launch1 { screenshot-screen; }
+
+    // ==========================================
+    //  Applications
+    // ==========================================
+    Super+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    Super+B hotkey-overlay-title="Open Browser" { spawn "google-chrome"; }
+}
+
+// ==========================================
+//  Recent Window Tabbing
+// ==========================================
+recent-windows {
+    binds {
+        Alt+Tab         { next-window scope="output"; }
+        Alt+Shift+Tab   { previous-window scope="output"; }
+        Alt+grave       { next-window filter="app-id"; }
+        Alt+Shift+grave { previous-window filter="app-id"; }
+    }
+}
