@@ -43,6 +43,7 @@
     catppuccin-cursors.mochaDark
     google-chrome
     nautilus
+    nautilus-python
     nil
     nixd
     nixfmt
@@ -54,6 +55,7 @@
     zed-editor
   ];
 
+  nix.channel.enable = false;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
