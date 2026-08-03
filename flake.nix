@@ -23,6 +23,7 @@
         ./modules/hardware.nix
         ./modules/configuration.nix
         ./modules/noctalia.nix
+        ./modules/system_packages.nix
       ];
     };
   };

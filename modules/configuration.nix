@@ -37,24 +37,6 @@
   programs.nix-ld.enable = true; # Make uv work
   services.gvfs.enable = true; # Network access in nautilus
 
-  environment.systemPackages = with pkgs; [
-    adwaita-icon-theme
-    alacritty
-    catppuccin-cursors.mochaDark
-    google-chrome
-    nautilus
-    nautilus-python
-    nil
-    nixd
-    nixfmt
-    odin
-    opencode
-    rustup
-    uv
-    vim
-    zed-editor
-  ];
-
   nix = {
     optimise.automatic = true;
     channel.enable = false;
