@@ -1,7 +1,6 @@
 { inputs, pkgs, ... }:
 {
   imports = [
-    inputs.chaotic.nixosModules.default
     inputs.noctalia.nixosModules.default
     inputs.noctalia-greeter.nixosModules.default
     inputs.trcc-linux.nixosModules.default
@@ -35,20 +34,6 @@
       enable = true;
       enableFishIntegration = true;
     };
-  };
-
-  # Enable Proton Cachyos
-  system.activationScripts.protonCachyos = {
-    deps = [ "users" ];
-    text = ''
-      target=/home/rcsaquino/.local/share/Steam/compatibilitytools.d/Proton-CachyOS
-      ${pkgs.coreutils}/bin/install -d -o rcsaquino -g users "$target"
-      ${pkgs.findutils}/bin/find "$target" -type l -delete
-      ${pkgs.lndir}/bin/lndir -silent \
-        "${pkgs.proton-cachyos_x86_64_v3}/bin" \
-        "$target"
-      ${pkgs.coreutils}/bin/chown -R --no-dereference rcsaquino:users "$target"
-    '';
   };
 
   # System Packages

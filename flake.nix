@@ -21,6 +21,7 @@
         modules = [
           ./modules/apps.nix
           ./modules/configuration.nix
+          ./modules/extras.nix
           ./modules/hardware.nix
         ];
       };
