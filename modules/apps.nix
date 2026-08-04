@@ -49,6 +49,7 @@
     odin
     opencode
     python3 # Hydra Launcher
+    telegram-desktop
     uv
     vim
     xwayland-satellite # Steam

@@ -1,13 +1,21 @@
 { pkgs, ... }:
 {
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+
+    # Lofree Flow Fix
+    extraModprobeConfig = ''
+      options hid_apple fnmode=2
+    '';
+  };
 
   hardware.nvidia.open = true;
-
+  zramSwap.enable = true;
   networking.hostName = "nixos";
-
   time.timeZone = "Asia/Manila";
 
   users.users.rcsaquino = {
