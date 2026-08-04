@@ -6,10 +6,8 @@
     inputs.trcc-linux.nixosModules.default
   ];
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnsupportedSystem = true;
-  };
+  # Allow unfree software
+  nixpkgs.config.allowUnfree = true;
 
   # NixOS Programs
   programs = {
