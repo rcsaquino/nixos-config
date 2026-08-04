@@ -1,4 +1,10 @@
 { inputs, pkgs, ... }:
+let
+  notionIcon = pkgs.fetchurl {
+    url = "https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original";
+    sha256 = "sha256-G1KhhdgWbZM59cFt1ReJ7jD0mmW01Ac4KQtgQj4zEWA=";
+  };
+in
 {
   imports = [
     inputs.chaotic.nixosModules.default
@@ -25,7 +31,8 @@
       desktopName = "Notion";
       genericName = "Notes and workspace";
       exec = "${google-chrome}/bin/google-chrome-stable --app=https://app.notion.com/";
-      icon = "/home/rcsaquino/nixos-config/assets/icons/notion.svg";
+      # icon = "/home/rcsaquino/nixos-config/assets/icons/notion.svg";
+      icon = "${notionIcon}";
       terminal = false;
       categories = [ "Office" ];
       keywords = [

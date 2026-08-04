@@ -99,8 +99,8 @@ community_ids = [ "discord", "pi-agent", "steam", "telegram", "zed" ]
 directory = "~/nixos-config/assets/wallpapers"
 
 [widget.launcher]
-# custom_image = "/home/rcsaquino/nixos-config/assets/icons/arch.svg"
-# custom_image_colorize = true
+custom_image = "/home/rcsaquino/nixos-config/assets/icons/nixos.svg"
+custom_image_colorize = true
 
 [widget.workspaces]
 show_labels = false
