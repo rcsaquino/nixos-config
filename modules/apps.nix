@@ -37,6 +37,7 @@
     catppuccin-cursors.mochaDark
     google-chrome
     hydralauncher
+    mangohud
     nautilus
     nautilus-python # Nautilus "Open in Alacritty/Zed"
     nil # Zed Nix LSP
