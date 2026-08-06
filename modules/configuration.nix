@@ -40,10 +40,7 @@
 
   services = {
     gvfs.enable = true; # Network access in nautilus
-    xserver = {
-      enable = true;
-      videoDrivers = [ "nvidia" ];
-    };
+    xserver.videoDrivers = [ "nvidia" ];
   };
 
   time.timeZone = "Asia/Manila";
