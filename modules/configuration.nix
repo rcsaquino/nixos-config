@@ -31,8 +31,8 @@
     channel.enable = false;
     gc = {
       automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 14d";
+      dates = "weekly";
+      options = "--delete-older-than 30d";
     };
     optimise.automatic = true;
     settings.experimental-features = [
