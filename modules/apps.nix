@@ -45,6 +45,7 @@
     nixfmt # Zed Nix LSP
     odin
     opencode
+    pi-coding-agent
     python3 # Hydra Launcher
     telegram-desktop
     uv
