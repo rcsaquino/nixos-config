@@ -10,9 +10,9 @@ let
 in
 {
   environment = {
-    sessionVariables.PROTONPATH = "${pkgs.proton-cachyos_x86_64_v3}/bin"; # Use Proton CachyOS by default
+    sessionVariables.PROTONPATH = "${pkgs.proton-cachyos_x86_64_v3}/bin"; # For Hydra Launcher
     systemPackages = with pkgs; [
-      suspendMode
+      suspendMode # Noctalia sleep
       # Notion
       (makeDesktopItem {
         name = "notion";
