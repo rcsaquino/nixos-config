@@ -38,6 +38,9 @@ shutting_down = "/home/rcsaquino/nixos-config/scripts/toggle-speakers/.venv/bin/
 [location]
 auto_locate = true
 
+[lockscreen]
+enabled = false
+
 [osd]
 position = "bottom_center"
 
@@ -56,14 +59,13 @@ wallpaper_placement = "floating"
 control_center_placement = "floating"
 session_placement = "floating"
 session_position = "center"
-open_near_click_control_center = true
 
 [[shell.session.actions]]
 action = "command"
 label = "Light Sleep"
 glyph = "zzz"
 command = "sudo -n suspend-mode s2idle"
-countdown_seconds = 5
+countdown_seconds = 3
 shortcut = "1"
 
 [[shell.session.actions]]
@@ -71,19 +73,19 @@ action = "command"
 label = "Deep Sleep"
 glyph = "moon"
 command = "sudo -n suspend-mode deep"
-countdown_seconds = 5
+countdown_seconds = 3
 shortcut = "2"
 
 [[shell.session.actions]]
 action = "reboot"
 variant = "destructive"
-countdown_seconds = 5
+countdown_seconds = 3
 shortcut = "3"
 
 [[shell.session.actions]]
 action = "shutdown"
 variant = "destructive"
-countdown_seconds = 5
+countdown_seconds = 3
 shortcut = "4"
 
 [theme]

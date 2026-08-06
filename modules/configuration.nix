@@ -16,7 +16,10 @@
 
   hardware = {
     bluetooth.enable = true;
-    nvidia.open = true;
+    nvidia = {
+      open = true; # Use latest drivers
+      powerManagement.enable = true; # Allows S3 to work # opencode -s ses_02a98ea60ffeMBvmVSRFhw9k46
+    };
   };
 
   networking = {

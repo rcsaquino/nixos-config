@@ -35,7 +35,7 @@ in
       users = [ "rcsaquino" ];
       commands = [
         {
-          command = "${suspendMode}/bin/suspend-mode";
+          command = "/run/current-system/sw/bin/suspend-mode";
           options = [ "NOPASSWD" ];
         }
       ];
