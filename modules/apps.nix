@@ -1,11 +1,5 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
-  imports = [
-    inputs.noctalia.nixosModules.default
-    inputs.noctalia-greeter.nixosModules.default
-    inputs.trcc-linux.nixosModules.default
-  ];
-
   # Allow unfree software
   nixpkgs.config.allowUnfree = true;
 
@@ -23,7 +17,12 @@
     nix-ld.enable = true; # Make uv work
     noctalia.enable = true;
     noctalia-greeter.enable = true;
-    steam.enable = true;
+    steam = {
+      enable = true;
+      extraCompatPackages = [
+        pkgs.proton-cachyos_x86_64_v3
+      ];
+    };
     trcc-linux.enable = true;
     zoxide = {
       enable = true;
