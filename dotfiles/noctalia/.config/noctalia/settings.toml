@@ -59,6 +59,7 @@ wallpaper_placement = "floating"
 control_center_placement = "floating"
 session_placement = "floating"
 session_position = "center"
+open_near_click_control_center = true
 
 [[shell.session.actions]]
 action = "command"
