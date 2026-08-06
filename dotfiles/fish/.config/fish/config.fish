@@ -9,7 +9,7 @@ alias zed="zeditor"
 alias zz="cd .."
 
 # DOTFILES
-alias dotf="~/gitfiles/dotf/dotf"
+alias dotf="~/nixos-config/scripts/dotf/dotf.sh"
 
 # NIXOS
 alias nrs="sudo nixos-rebuild switch --flake ~/nixos-config#main-pc"
