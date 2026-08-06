@@ -43,6 +43,7 @@
     nil # Zed Nix LSP
     nixd # Zed Nix LSP
     nixfmt # Zed Nix LSP
+    nodejs
     odin
     opencode
     pi-coding-agent
