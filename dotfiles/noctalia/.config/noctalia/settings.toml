@@ -58,33 +58,33 @@ session_placement = "floating"
 session_position = "center"
 open_near_click_control_center = true
 
-# [[shell.session.actions]]
-# action = "command"
-# label = "Light Sleep"
-# glyph = "zzz"
-# command = "sudo -n /usr/local/bin/suspend-mode s2idle"
-# countdown_seconds = 5
-# shortcut = "1"
+[[shell.session.actions]]
+action = "command"
+label = "Light Sleep"
+glyph = "zzz"
+command = "sudo -n suspend-mode s2idle"
+countdown_seconds = 5
+shortcut = "1"
 
-# [[shell.session.actions]]
-# action = "command"
-# label = "Deep Sleep"
-# glyph = "moon"
-# command = "sudo -n /usr/local/bin/suspend-mode deep"
-# countdown_seconds = 5
-# shortcut = "2"
+[[shell.session.actions]]
+action = "command"
+label = "Deep Sleep"
+glyph = "moon"
+command = "sudo -n suspend-mode deep"
+countdown_seconds = 5
+shortcut = "2"
 
-# [[shell.session.actions]]
-# action = "reboot"
-# variant = "destructive"
-# countdown_seconds = 5
-# shortcut = "3"
+[[shell.session.actions]]
+action = "reboot"
+variant = "destructive"
+countdown_seconds = 5
+shortcut = "3"
 
-# [[shell.session.actions]]
-# action = "shutdown"
-# variant = "destructive"
-# countdown_seconds = 5
-# shortcut = "4"
+[[shell.session.actions]]
+action = "shutdown"
+variant = "destructive"
+countdown_seconds = 5
+shortcut = "4"
 
 [theme]
 mode = "dark"
