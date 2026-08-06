@@ -21,10 +21,7 @@
     };
     niri.enable = true;
     nix-ld.enable = true; # Make uv work
-    noctalia = {
-      enable = true;
-      recommendedServices.enable = true;
-    };
+    noctalia.enable = true;
     noctalia-greeter.enable = true;
     steam.enable = true;
     trcc-linux.enable = true;
