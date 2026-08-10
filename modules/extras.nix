@@ -13,6 +13,7 @@ in
     sessionVariables.PROTONPATH = "${pkgs.proton-cachyos_x86_64_v3}/bin"; # For Hydra Launcher
     systemPackages = with pkgs; [
       suspendMode # Noctalia sleep
+
       # Notion
       (makeDesktopItem {
         name = "notion";
@@ -26,6 +27,52 @@ in
           "notes"
           "workspace"
         ];
+      })
+
+      # Viber
+      (pkgs.buildFHSEnv {
+        name = "viber";
+        targetPkgs =
+          pkgs: with pkgs; [
+            (viber.overrideAttrs (old: {
+              src = fetchurl {
+                url = "https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb";
+                hash = "sha256-lhU03Ay5IABux66BCLDhugmkdu7x4TtLNwp5zVLdIPM=";
+              };
+              postFixup = (old.postFixup or "") + ''
+                rm -f $out/opt/viber/lib/libxml2.so.2
+                ln -s ${libxml2_13.out}/lib/libxml2.so.2 $out/opt/viber/lib/libxml2.so.2
+              '';
+            }))
+            libxshmfence
+            libxcb-cursor
+            xcbutil
+            pipewire
+            fontconfig
+            freetype
+            noto-fonts
+            noto-fonts-cjk-sans
+            dejavu_fonts
+          ];
+        runScript = "viber";
+        profile = ''
+          export QT_QPA_PLATFORM=xcb
+          export QT_QPA_FONTDIR=${pkgs.noto-fonts}/share/fonts
+          export FONTCONFIG_FILE=${pkgs.fontconfig.out}/etc/fonts/fonts.conf
+        '';
+        extraInstallCommands = ''
+          mkdir -p $out/share/applications $out/share/icons
+          cp ${pkgs.viber}/share/applications/viber.desktop $out/share/applications/
+          sed -i 's|^Exec=.*|Exec=viber %u|' $out/share/applications/viber.desktop
+          sed -i '/^Path=/d' $out/share/applications/viber.desktop || true
+          if [ -d ${pkgs.viber}/share/icons ]; then
+            cp -r ${pkgs.viber}/share/icons/* $out/share/icons/
+          fi
+          if [ -d ${pkgs.viber}/share/pixmaps ]; then
+            mkdir -p $out/share/pixmaps
+            cp -r ${pkgs.viber}/share/pixmaps/* $out/share/pixmaps/ || true
+          fi
+        '';
       })
     ];
   };
