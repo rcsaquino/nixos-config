@@ -7,20 +7,9 @@
       timeout = 0;
       systemd-boot.enable = true;
     };
-
-    # Lofree Flow Fix
-    extraModprobeConfig = ''
-      options hid_apple fnmode=2
-    '';
   };
 
-  hardware = {
-    bluetooth.enable = true;
-    nvidia = {
-      open = true; # Use latest drivers
-      powerManagement.enable = true; # Allows S3 to work
-    };
-  };
+  hardware.bluetooth.enable = true;
 
   networking = {
     hostName = "nixos";
@@ -40,11 +29,8 @@
       "flakes"
     ];
   };
-
-  services = {
-    gvfs.enable = true; # Network access in nautilus
-    xserver.videoDrivers = [ "nvidia" ];
-  };
+  
+  services.gvfs.enable = true; # Network access in nautilus
 
   time.timeZone = "Asia/Manila";
 

@@ -23,7 +23,6 @@
         pkgs.proton-cachyos_x86_64_v3
       ];
     };
-    trcc-linux.enable = true;
     zoxide = {
       enable = true;
       enableFishIntegration = true;

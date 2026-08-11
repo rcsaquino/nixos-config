@@ -19,15 +19,12 @@
       main-pc = inputs.nixpkgs.lib.nixosSystem {
         # specialArgs = { inherit inputs; };
         modules = [
+          ./modules/hosts/main-pc.nix
+          
           ./modules/apps.nix
           ./modules/configuration.nix
           ./modules/extras.nix
           ./modules/hardware.nix
-
-          inputs.chaotic.nixosModules.default
-          inputs.noctalia.nixosModules.default
-          inputs.noctalia-greeter.nixosModules.default
-          inputs.trcc-linux.nixosModules.default
         ];
       };
     };
