@@ -17,14 +17,17 @@
   outputs = inputs: {
     nixosConfigurations = {
       main-pc = inputs.nixpkgs.lib.nixosSystem {
-        # specialArgs = { inherit inputs; };
         modules = [
-          ./modules/hosts/main-pc.nix
-          
+          inputs.trcc-linux.nixosModules.default
+          ./modules/hosts/main-pc/default.nix
+          ./modules/hosts/main-pc/hardware.nix
+
+          inputs.chaotic.nixosModules.default
+          inputs.noctalia.nixosModules.default
+          inputs.noctalia-greeter.nixosModules.default
           ./modules/apps.nix
           ./modules/configuration.nix
           ./modules/extras.nix
-          ./modules/hardware.nix
         ];
       };
     };
