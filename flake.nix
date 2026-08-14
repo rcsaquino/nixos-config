@@ -27,9 +27,10 @@
           inputs.chaotic.nixosModules.default
           inputs.noctalia.nixosModules.default
           inputs.noctalia-greeter.nixosModules.default
-          ./modules/apps.nix
           ./modules/configuration.nix
           ./modules/extras.nix
+          ./modules/packages.nix
+          ./modules/programs.nix
         ];
       };
     };
