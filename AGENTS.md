@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Personal NixOS flake config.
+rcsaquino's NixOS flake config.
 
 ## Commands
 
