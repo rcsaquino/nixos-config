@@ -61,9 +61,6 @@
         },
       },
     },
-    "Zig": {
-      "show_edit_predictions": false,
-    },
     "Odin": {
       "show_edit_predictions": false,
     },
