@@ -47,6 +47,7 @@
     opencode
     pi-coding-agent
     python3 # Hydra Launcher
+    qimgv
     telegram-desktop
     uv
     vim
