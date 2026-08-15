@@ -19,6 +19,7 @@
     pi-coding-agent
     python3 # Hydra Launcher
     qimgv
+    stremio-linux-shell
     telegram-desktop
     uv
     vim
