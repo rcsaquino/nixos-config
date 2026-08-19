@@ -36,15 +36,14 @@
     "sidebar_side": "right",
     "dock": "right",
     "inline_assistant_model": {
-      "provider": "opencode",
-      "model": "go/deepseek-v4-flash",
+      "provider": "openrouter",
+      "model": "openrouter/free",
     },
     "default_profile": "ask",
     "default_model": {
-      "effort": "max",
       "enable_thinking": true,
-      "provider": "opencode",
-      "model": "go/deepseek-v4-flash",
+      "provider": "openrouter",
+      "model": "openrouter/free",
     },
   },
   "languages": {

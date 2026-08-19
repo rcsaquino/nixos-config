@@ -5,6 +5,7 @@
     adwaita-icon-theme # Icons for nautilus
     alacritty
     catppuccin-cursors.mochaDark
+    codex
     google-chrome
     hydralauncher
     mangohud
