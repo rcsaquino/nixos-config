@@ -1,5 +1,9 @@
 layout {
-    gaps 16
+    gaps 8
+    struts {
+        top -4
+    }
+
     center-focused-column "never"
     always-center-single-column
 
@@ -27,6 +31,7 @@ layout {
         offset x=0 y=4
         draw-behind-window true
     }
+
     tab-indicator {
         on
         hide-when-single-tab
@@ -36,10 +41,6 @@ layout {
         gaps-between-tabs 4
         corner-radius 12
         width 4
-    }
-    struts {
-        top -8
-        bottom -4
     }
 }
 

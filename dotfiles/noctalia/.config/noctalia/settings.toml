@@ -3,12 +3,14 @@ enable_sounds = true
 sound_volume = 100
 
 [bar.default]
+padding = 6
 margin_ends = 0
 background_opacity = 0.0
 shadow = false
 capsule = true
 capsule_padding = 12
-capsule_opacity = 0.95
+capsule_opacity = 0.5
+capsule_radius = 8
 start = [ "launcher", "workspaces", "media"]
 center = ["clock"]
 end = [ "tray", "cpu", "ram", "volume", "bluetooth", "network", "battery", "session" ]
@@ -20,20 +22,9 @@ warning_threshold = 20
 sidebar = "full"
 sidebar_section = "none"
 
-[dock]
-enabled = true
-active_monitor_only = true
-auto_hide = true
-reserve_space = false
-show_dots = true
-cross_axis_padding = 4
-icon_size = 32
-item_spacing = 4
-shadow = false
-
 [hooks]
-started = "/home/rcsaquino/nixos-config/scripts/toggle-speakers/.venv/bin/python /home/rcsaquino/nixos-config/scripts/toggle-speakers/main.py on"
-shutting_down = "/home/rcsaquino/nixos-config/scripts/toggle-speakers/.venv/bin/python /home/rcsaquino/nixos-config/scripts/toggle-speakers/main.py off"
+started = "~/nixos-config/scripts/toggle-speakers/.venv/bin/python ~/nixos-config/scripts/toggle-speakers/main.py on"
+shutting_down = "~/nixos-config/scripts/toggle-speakers/.venv/bin/python ~/nixos-config/scripts/toggle-speakers/main.py off"
 
 [location]
 auto_locate = true
@@ -102,7 +93,7 @@ community_ids = [ "discord", "pi-agent", "steam", "telegram", "zed" ]
 directory = "~/nixos-config/assets/wallpapers"
 
 [widget.launcher]
-custom_image = "/home/rcsaquino/nixos-config/assets/icons/nixos.svg"
+custom_image = "~/nixos-config/assets/icons/nixos.svg"
 custom_image_colorize = true
 
 [widget.workspaces]
