@@ -25,5 +25,13 @@ alias odinb-fast="odin build . -o:aggressive -vet -strict-style -source-code-loc
 # FUNCTION ALIASES
 function mkcd
     mkdir $argv[1]
-    and cd $argv[1]
+    cd $argv[1]
+end
+
+function pdfpp
+    rm -rf ~/Downloads/tmp_pdfpp
+    mkdir ~/Downloads/tmp_pdfpp
+    pdftoppm -jpeg ~/Downloads/tmp.pdf ~/Downloads/tmp_pdfpp/page
+    xdg-open ~/Downloads/tmp_pdfpp
+    rm -rf ~/Downloads/tmp.pdf
 end

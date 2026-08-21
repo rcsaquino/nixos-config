@@ -18,8 +18,9 @@
     odin
     opencode
     pi-coding-agent
+    poppler-utils # pdfpp
     python3 # Hydra Launcher
-    qimgv
+    qimgv # Image viewer
     stremio-linux-shell
     telegram-desktop
     uv
