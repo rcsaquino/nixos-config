@@ -40,18 +40,6 @@ in
     ];
   };
 
-  # Viber Fix
-  # xdg.desktopEntries.viber = {
-  #   name = "Viber";
-  #   exec = "FONTCONFIG_FILE=${../assets/viber-font.conf} viber %u"; # Replace with your custom exec command
-  #   terminal = false;
-  #   categories = [
-  #     "Network"
-  #     "InstantMessaging"
-  #   ];
-  #   icon = "viber";
-  # };
-
   # Noctalia sleep
   security.sudo.extraRules = [
     {
