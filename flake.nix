@@ -21,7 +21,7 @@
       main-pc = inputs.nixpkgs.lib.nixosSystem {
         modules = [
           inputs.trcc-linux.nixosModules.default
-          ./modules/hosts/main-pc/default.nix
+          ./modules/hosts/main-pc/configuration.nix
           ./modules/hosts/main-pc/hardware.nix
 
           inputs.chaotic.nixosModules.default
