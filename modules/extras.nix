@@ -40,6 +40,20 @@ in
     ];
   };
 
+  # Remove Window Decorations
+  programs.dconf = {
+    enable = true;
+    profiles.user.databases = [
+      {
+        settings = {
+          "org/gnome/desktop/wm/preferences" = {
+            button-layout = ":";
+          };
+        };
+      }
+    ];
+  };
+
   # Noctalia sleep
   security.sudo.extraRules = [
     {
