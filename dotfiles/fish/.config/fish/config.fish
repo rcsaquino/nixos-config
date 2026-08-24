@@ -3,7 +3,6 @@ set fish_greeting
 # QOL ALIASES
 alias cd="z"
 alias ll="ls -la"
-alias mkcd="mkdir -p $1 && cd $1"
 alias open="xdg-open"
 alias zed="zeditor"
 alias zz="cd .."
@@ -21,17 +20,3 @@ alias odinb-sizesafe="odin build . -o:speed -vet -strict-style -source-code-loca
 alias odinb-size="odin build . -o:speed -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check"
 alias odinb-fastsafe="odin build . -o:aggressive -vet -strict-style -source-code-locations:obfuscated"
 alias odinb-fast="odin build . -o:aggressive -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check"
-
-# FUNCTION ALIASES
-function mkcd
-    mkdir $argv[1]
-    cd $argv[1]
-end
-
-function pdfpp
-    rm -rf ~/Downloads/tmp_pdfpp
-    mkdir ~/Downloads/tmp_pdfpp
-    pdftoppm -jpeg ~/Downloads/tmp.pdf ~/Downloads/tmp_pdfpp/page
-    xdg-open ~/Downloads/tmp_pdfpp
-    rm -rf ~/Downloads/tmp.pdf
-end
