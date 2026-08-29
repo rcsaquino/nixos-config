@@ -1,11 +1,20 @@
-import hashlib, hmac, json, os, sys, time
-from dotenv import load_dotenv
-import requests
+try:
+    import hashlib, hmac, json, os, sys, time
+    from dotenv import load_dotenv
+    import requests
+except:
+    print("No modules found")
+    sys.exit()
 
-load_dotenv()
-ACCESS_ID = os.environ["TUYA_ACCESS_ID"]
-ACCESS_SECRET = os.environ["TUYA_ACCESS_SECRET"]
-DEVICE_ID = os.environ["TUYA_DEVICE_ID"]
+try:
+    load_dotenv()
+    ACCESS_ID = os.environ["TUYA_ACCESS_ID"]
+    ACCESS_SECRET = os.environ["TUYA_ACCESS_SECRET"]
+    DEVICE_ID = os.environ["TUYA_DEVICE_ID"]
+except:
+    print("No environment variables found")
+    sys.exit()
+
 API_HOST = "https://openapi.tuyaus.com"
 
 COMMANDS = [
