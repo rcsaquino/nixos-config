@@ -4,8 +4,12 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme # Icons for nautilus
     alacritty
+    bun
     catppuccin-cursors.mochaDark
     codex
+    gcc
+    gnumake
+    go
     google-chrome
     hydralauncher
     mangohud
@@ -21,11 +25,14 @@
     poppler-utils # pdfpp
     python3 # Hydra Launcher
     qimgv # Image viewer
+    rustup
     stremio-linux-shell
     telegram-desktop
     uv
     vim
+    vlang
     xwayland-satellite # Steam
     zed-editor
+    zig
   ];
 }
