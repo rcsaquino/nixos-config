@@ -12,6 +12,7 @@
     go
     google-chrome
     hydralauncher
+    hyperfine
     mangohud
     nautilus
     nautilus-python # Nautilus "Open in Alacritty/Zed"
