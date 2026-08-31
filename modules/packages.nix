@@ -34,6 +34,5 @@
     vlang
     xwayland-satellite # Steam
     zed-editor
-    zig
   ];
 }
