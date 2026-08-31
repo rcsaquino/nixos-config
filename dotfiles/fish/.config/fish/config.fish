@@ -16,7 +16,5 @@ alias nixup="sudo nix flake update --flake ~/nixos-config && nrs"
 
 # ODIN
 alias odin-tracker="cp ~/nixos-config/assets/odin/mem_tracker.odin ."
-alias odinb-sizesafe="odin build . -o:speed -vet -strict-style -source-code-locations:obfuscated"
-alias odinb-size="odin build . -o:speed -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check"
-alias odinb-fastsafe="odin build . -o:aggressive -vet -strict-style -source-code-locations:obfuscated"
-alias odinb-fast="odin build . -o:aggressive -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check"
+alias odinb-safe="odin build . -o:speed -lto:thin -vet -strict-style -source-code-locations:obfuscated"
+alias odinb-fast="odin build . -o:aggressive -lto:thin -vet -strict-style -source-code-locations:obfuscated -disable-assert -no-bounds-check"
