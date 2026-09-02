@@ -6,7 +6,7 @@ binds {
     Super+Shift+P { power-off-monitors; }
     Super+Escape { toggle-keyboard-shortcuts-inhibit; }
     Super+Shift+Slash { show-hotkey-overlay; }
-    Super+Ctrl+Shift+F1 repeat=false hotkey-overlay-title="Toggle eDP-1" { spawn "sh" "-c" "niri msg outputs | grep -n1 eDP-1 | grep -q Disabled && niri msg output eDP-1 on || niri msg output eDP-1 off"; }
+    Super+Ctrl+Shift+F1 repeat=false hotkey-overlay-title="Toggle eDP-1" { spawn-sh "niri msg outputs | grep -n1 eDP-1 | grep -q Disabled && niri msg output eDP-1 on || niri msg output eDP-1 off"; }
 
     // ==========================================
     //  Window Management
