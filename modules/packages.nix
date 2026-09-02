@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme # Icons for nautilus
     alacritty
+    aria2
     bun
     catppuccin-cursors.mochaDark
     codex
