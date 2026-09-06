@@ -7,7 +7,6 @@
     aria2
     bun
     catppuccin-cursors.mochaDark
-    codex
     gcc
     gnumake
     go
@@ -22,8 +21,6 @@
     nixfmt # Zed Nix LSP
     nodejs
     odin
-    opencode
-    pi-coding-agent
     poppler-utils # pdfpp
     python3 # Hydra Launcher
     qimgv # Image viewer
