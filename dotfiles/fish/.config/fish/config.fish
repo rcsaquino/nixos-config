@@ -10,6 +10,9 @@ alias zz="cd .."
 # DOTFILES
 alias dotf="~/nixos-config/scripts/dotf/dotf.sh"
 
+# HABI
+alias habi="~/apps/habi/target/release/habi"
+
 # NIXOS
 alias nrs="sudo nixos-rebuild switch --flake ~/nixos-config#main-pc"
 alias nixup="sudo nix flake update --flake ~/nixos-config && nrs"
