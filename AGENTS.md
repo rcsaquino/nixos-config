@@ -10,7 +10,7 @@ rcsaquino's NixOS flake config.
 
 No CI, linter, or formatter exists; verification is flake evaluation.
 
-- For Niri dotfile changes, run `niri validate`; these symlinked configs reload without a NixOS rebuild. `Super+Shift+A` launches Telegram via `Telegram` (case-sensitive).
+- For Niri dotfile changes, run `niri validate`; these symlinked configs reload without a NixOS rebuild. App launch shortcuts use `repeat=false`. `Super+Shift+A` launches Telegram via `Telegram` (case-sensitive).
 
 When you change the repo, update this file in the same session (new commands, gotchas, or hashes; fix stale paths; delete obsolete entries). Keep it compact.
 
