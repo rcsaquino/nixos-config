@@ -10,6 +10,8 @@ rcsaquino's NixOS flake config.
 
 No CI, linter, or formatter exists; verification is flake evaluation.
 
+- For Niri dotfile changes, run `niri validate`; these symlinked configs reload without a NixOS rebuild. `Super+Shift+A` launches ChatGPT via `codex-desktop`.
+
 When you change the repo, update this file in the same session (new commands, gotchas, or hashes; fix stale paths; delete obsolete entries). Keep it compact.
 
 ## Layout and conventions

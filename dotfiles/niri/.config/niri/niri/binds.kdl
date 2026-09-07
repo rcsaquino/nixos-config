@@ -151,6 +151,7 @@ binds {
     // ==========================================
     Super+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Super+B hotkey-overlay-title="Open Browser" { spawn "google-chrome"; }
+    Super+Shift+A repeat=false hotkey-overlay-title="Open ChatGPT" { spawn "codex-desktop"; }
 }
 
 // ==========================================
