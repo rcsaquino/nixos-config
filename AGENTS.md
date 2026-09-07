@@ -6,7 +6,7 @@ rcsaquino's NixOS flake config.
 
 - Rebuild: `sudo nixos-rebuild switch --flake .#main-pc`
 - Verify a change without applying: `nix flake check` and `sudo nixos-rebuild dry-build --flake .#main-pc`
-- `nix flake update` only when the user asks to bump inputs. Note: `flake.lock` is currently root-owned, so updates/rebuilds that rewrite it need `sudo` (or `chown` it first).
+- `nix flake update` only when the user asks to bump inputs. Use `nix flake lock` to add new inputs without bumping existing ones; `flake.lock` is user-owned.
 
 No CI, linter, or formatter exists; verification is flake evaluation.
 
@@ -28,6 +28,7 @@ When you change the repo, update this file in the same session (new commands, go
 - `system.stateVersion = "26.05"` in `modules/configuration.nix` — do not change (commented in-file).
 - `modules/extras.nix` pins a `fetchurl` hash for the Notion icon; changing that URL requires updating its hash (use `nix-prefetch-url`). Viber uses nixpkgs `viber` with an `overrideAttrs` (no FHS wrapper, no pinned hash).
 - `allowUnfree` is enabled in `modules/packages.nix`; flake `nixConfig` adds the noctalia.cachix.org substituter.
+- ChatGPT uses the `codex-desktop-linux` community flake wrapping OpenAI's Linux app; launch `codex-desktop` (ChatGPT Community). Only the `frameless-titlebar` optional feature is enabled in `modules/programs.nix`; nixpkgs `chatgpt` is macOS-only at the current pin.
 - Hardware context: AMD Ryzen 5 7500F + RTX 5060 Ti (explains `hardware.nvidia.open`), Thermalright cooler (explains the trcc-linux module).
 
 ## Main PC Specs

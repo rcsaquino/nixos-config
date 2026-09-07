@@ -3,6 +3,7 @@
 
   inputs = {
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    codex-desktop-linux.url = "github:ilysenko/codex-desktop-linux";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter";
@@ -25,6 +26,7 @@
           ./modules/hosts/main-pc/hardware.nix
 
           inputs.chaotic.nixosModules.default
+          inputs.codex-desktop-linux.nixosModules.default
           inputs.noctalia.nixosModules.default
           inputs.noctalia-greeter.nixosModules.default
           ./modules/configuration.nix

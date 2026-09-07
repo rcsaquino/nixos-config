@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
   programs = {
+    codexDesktopLinux = {
+      enable = true;
+      linuxFeatures = [ "frameless-titlebar" ];
+    };
     fish.enable = true;
     git = {
       enable = true;
