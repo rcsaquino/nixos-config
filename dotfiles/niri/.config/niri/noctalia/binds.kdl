@@ -2,7 +2,7 @@ binds {
     Super+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     Super+S { spawn-sh "noctalia msg panel-toggle control-center"; }
     Super+X { spawn-sh "noctalia msg panel-toggle session"; }
-    Super+C { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Super+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Super+N { spawn-sh "noctalia msg panel-toggle noctalia/notes:panel"; }
     Super+Comma { spawn-sh "noctalia msg settings-toggle"; }
 

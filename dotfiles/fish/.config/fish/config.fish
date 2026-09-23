@@ -16,7 +16,7 @@ alias dotf="~/nixos-config/scripts/dotf/dotf.sh"
 
 # NIXOS
 alias nrs="sudo nixos-rebuild switch --flake ~/nixos-config#main-pc"
-alias nixup="sudo nix flake update --flake ~/nixos-config && nrs"
+alias nixup="nix flake update --flake ~/nixos-config && nrs"
 
 # ODIN
 alias odin-tracker="cp ~/nixos-config/assets/odin/mem_tracker.odin ."

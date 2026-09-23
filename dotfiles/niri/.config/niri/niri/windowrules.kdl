@@ -5,9 +5,5 @@ window-rule {
     opacity 0.80
     background-effect {
         blur true
-    }    
-}
-
-window-rule {
-    // open-floating false
+    }
 }
