@@ -7,6 +7,7 @@
     aria2
     bun
     catppuccin-cursors.mochaDark
+    faugus-launcher
     gcc
     gnumake
     go

@@ -16,7 +16,6 @@
     niri.enable = true;
     nix-ld.enable = true; # Make uv work
     noctalia.enable = true;
-    noctalia-greeter.enable = true;
     steam = {
       enable = true;
       extraCompatPackages = [
@@ -28,4 +27,6 @@
       enableFishIntegration = true;
     };
   };
+
+  services.displayManager.noctalia-greeter.enable = true;
 }
