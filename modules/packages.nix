@@ -7,7 +7,6 @@
     aria2
     bun
     catppuccin-cursors.mochaDark
-    faugus-launcher
     gcc
     gnumake
     go
@@ -23,6 +22,7 @@
     nodejs
     odin
     poppler-utils # pdfpp
+    protonup-rs
     python3 # Hydra Launcher
     qimgv # Image viewer
     rustup
