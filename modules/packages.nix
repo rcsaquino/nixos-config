@@ -31,6 +31,7 @@
     uv
     vim
     vlang
+    wl-clipboard # Pi Agent
     xwayland-satellite # Steam
     zed-editor
   ];
