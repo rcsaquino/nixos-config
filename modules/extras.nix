@@ -10,7 +10,6 @@ let
 in
 {
   environment = {
-    sessionVariables.PROTONPATH = "${pkgs.proton-cachyos_x86_64_v3}/bin"; # Hydra Launcher
     systemPackages = with pkgs; [
       suspendMode # Noctalia sleep
 

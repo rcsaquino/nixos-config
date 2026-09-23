@@ -36,14 +36,14 @@
     "dock": "right",
     "inline_assistant_model": {
       "provider": "deepseek",
-      "model": "deepseek-flash",
+      "model": "deepseek-v4-pro",
     },
     "default_profile": "ask",
     "default_model": {
       "effort": "max",
       "enable_thinking": true,
       "provider": "deepseek",
-      "model": "deepseek-flash",
+      "model": "deepseek-v4-pro",
     },
   },
   "languages": {

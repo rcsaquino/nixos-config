@@ -1,10 +1,5 @@
-{ pkgs, ... }:
 {
   programs = {
-    codexDesktopLinux = {
-      enable = true;
-      linuxFeatures = [ "frameless-titlebar" ];
-    };
     fish.enable = true;
     git = {
       enable = true;
@@ -16,12 +11,7 @@
     niri.enable = true;
     nix-ld.enable = true; # Make uv work
     noctalia.enable = true;
-    steam = {
-      enable = true;
-      extraCompatPackages = [
-        pkgs.proton-cachyos_x86_64_v3
-      ];
-    };
+    steam.enable = true;
     zoxide = {
       enable = true;
       enableFishIntegration = true;
