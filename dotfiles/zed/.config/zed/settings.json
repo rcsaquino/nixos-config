@@ -35,14 +35,15 @@
     "sidebar_side": "right",
     "dock": "right",
     "inline_assistant_model": {
-      "provider": "openrouter",
-      "model": "openrouter/free",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
     },
     "default_profile": "ask",
     "default_model": {
+      "effort": "max",
       "enable_thinking": true,
-      "provider": "openrouter",
-      "model": "openrouter/free",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
     },
   },
   "languages": {

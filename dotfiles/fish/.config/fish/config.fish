@@ -7,11 +7,12 @@ alias open="xdg-open"
 alias zed="zeditor"
 alias zz="cd .."
 
+# APPS
+alias mods="rm -rf ~/sandbox/mhw-mod-manager/target && nix run ~/sandbox/mhw-mod-manager"
+alias habi="~/apps/habi/target/release/habi"
+
 # DOTFILES
 alias dotf="~/nixos-config/scripts/dotf/dotf.sh"
-
-# HABI
-alias habi="~/apps/habi/target/release/habi"
 
 # NIXOS
 alias nrs="sudo nixos-rebuild switch --flake ~/nixos-config#main-pc"
