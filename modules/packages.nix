@@ -14,6 +14,7 @@
     hydralauncher
     hyperfine
     mangohud
+    mpv
     nautilus
     nautilus-python # Nautilus "Open in Alacritty/Zed"
     nil # Zed Nix LSP
