@@ -7,6 +7,7 @@
     aria2
     bun
     catppuccin-cursors.mochaDark
+    fd # Pi Agent
     gcc
     gnumake
     go
@@ -26,6 +27,7 @@
     protonup-rs
     python3 # Hydra Launcher
     qimgv # Image viewer
+    ripgrep # Pi Agent
     rustup
     stremio-linux-shell
     telegram-desktop
