@@ -9,6 +9,7 @@
     catppuccin-cursors.mochaDark
     fd # Pi Agent
     gcc
+    gh
     gnumake
     go
     google-chrome
