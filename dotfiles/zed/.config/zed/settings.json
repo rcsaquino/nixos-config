@@ -11,7 +11,7 @@
   "default_open_behavior": "new_window",
   "language_models": {
     "opencode": {
-      "show_zen_models": false,
+      "show_zen_models": true,
     },
   },
   "cli_default_open_behavior": "new_window",
@@ -32,7 +32,9 @@
     "mode": "eager",
   },
   "agent": {
-    "sidebar_side": "right",
+    "threads_sidebar": {
+      "position": "right"
+    },
     "dock": "right",
     "inline_assistant_model": {
       "provider": "deepseek",
