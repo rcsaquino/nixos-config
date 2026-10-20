@@ -10,6 +10,7 @@ alias zz="cd .."
 # APPS
 alias mods="rm -rf ~/sandbox/mhw-mod-manager/target && nix run ~/sandbox/mhw-mod-manager"
 alias habi="nix run github:rcsaquino/habi"
+alias pomo="nix run github:Bahaaio/pomo"
 
 # DOTFILES
 alias dotf="~/nixos-config/scripts/dotf/dotf.sh"

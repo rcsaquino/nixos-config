@@ -42,6 +42,7 @@ enabled = [ "noctalia/notes" ]
 polkit_agent = true
 
 [shell.launcher]
+layout = "simple"
 categories = false
 
 [shell.panel]
